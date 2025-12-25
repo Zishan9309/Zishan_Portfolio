@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>RESPONSIVE PERSONAL PORTFOLIO</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="data:,">
+
+</head>
+
+<body>
+    <!--body-->
+    <header class="header">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SKILLS</a>
+            <a href="#portfolio">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello,It's Me</h3>
+            <h1>Zishan Khan</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <div class="social-media">
+                <a href="https://github.com/Zishan9309"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/zishan-khan-shaker-khan-a310a3259/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <div class="resume-buttons">
+                <!-- See Resume -->
+                <a 
+                    href="assets/resume/Zishan_UpdatedResume.pdf" 
+                    class="btn" 
+                    target="_blank"
+                >
+                    See Resume
+                </a>
+
+                <!-- Download Resume -->
+                <a 
+                    href="assets/resume/Zishan_UpdatedResume.pdf" 
+                    class="btn" 
+                    download
+                >
+                    Download Resume
+                </a>
+            </div>
+
+        </div>
+        <div class="home-img">
+            <img src="portfolio.png" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="portfolio.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>ME</span></h2>
+        <h3>Full Stack Developer</h3>
+        <p id="about-text">Hello! I'm Zishan Khan <br>A Computer Science Engineering student and a passionate full stack developer. I enjoy designing intuitive user interfaces writing clean backend logic and integrating powerful databases to build complete end-to-end applications. My experience spans technologies like React, Node.js, PHP, SQL, MongoDB, and Python, which I have used to develop projects.</p>
+        <p id="about-text-more" class="hidden">I love learning new technologies, solving problems through code, and turning ideas into practical digital solutions. My goal is to become a versatile software developer who can create meaningful, user focused applications and contribute to impactful projects.</p>
+        <a href="#" class="btn" id="read-more-btn">Read More</a>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="heading"><span>SKILLS</span></h2>
+
+        <div class="services-container">
+
+    <!-- FRONTEND -->
+    <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>Frontend</h3>
+
+        <div class="skill-icons">
+            <div><i class='bx bxl-html5'></i><span>HTML</span></div>
+            <div><i class='bx bxl-css3'></i><span>CSS</span></div>
+            <div><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+            <div><i class='bx bxl-react'></i><span>React</span></div>
+            <div><i class='bx bxl-bootstrap'></i><span>Bootstrap</span></div>
+            <div><i class='bx bx-layer'></i><span>Tailwind CSS</span></div>
+        </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="services-box">
+        <i class='bx bx-server'></i>
+        <h3>Backend</h3>
+
+        <div class="skill-icons">
+            <div><i class='bx bxl-nodejs'></i><span>Node.js</span></div>
+            <div><i class='bx bxl-php'></i><span>PHP</span></div>
+            <div><i class='bx bxl-python'></i><span>Python</span></div>
+            <div><i class='bx bx-data'></i><span>REST API</span></div>
+        </div>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="services-box">
+        <i class='bx bx-data'></i>
+        <h3>Databases</h3>
+
+        <div class="skill-icons">
+            <div><i class='bx bxl-mongodb'></i><span>MongoDB</span></div>
+            <div><i class='bx bx-data'></i><span>MySQL</span></div>
+            <div><i class='bx bx-data'></i><span>SQL</span></div>
+        </div>
+    </div>
+
+    <div class="services-box single-box">
+    <i class='bx bx-code'></i>
+    <h3>Programming Languages</h3>
+
+    <div class="skill-icons">
+        <div><i class='bx bxl-python'></i><span>Python</span></div>
+        <div><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+        <div><i class='bx bxl-java'></i><span>Java</span></div>
+        <div><i class='bx bxl-c-plus-plus'></i><span>C</span></div>
+    </div>
+    </div>
+
+    <div class="services-box">
+    <i class='bx bx-brain'></i>
+    <h3>Core CS Skills</h3>
+    <p>
+        Strong foundation in computer science concepts and problem-solving.
+    </p>
+
+    <div class="skill-icons">
+        <div>
+            <i class='bx bx-code'></i>
+            <span>Data Structures & Algorithms</span>
+        </div>
+
+        <div>
+            <i class='bx bx-cube'></i>
+            <span>Object Oriented Programming</span>
+        </div>
+
+        <div>
+            <i class='bx bx-bot'></i>
+            <span>AI / ML (Basics)</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading"><span>PROJECTS</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="Task.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Task Management</h4>
+                    <p>An Employee Task Management System is a web-based application designed to streamline task assignment and tracking.</p>
+                    <div class="project-links">
+                        <a href="https://zishan.ct.ws/" target="_blank" class="btn live">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Zishan9309/Task-Management/tree/main/Task%20Management" target="_blank" class="btn code">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Anganwadi.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Anganwadi Support</h4>
+                    <p>Develop technical skills in web development.Gain practical
+                        experience through collaboration.</p>
+                    <div class="project-links">
+                        <a href="https://your-live-demo-link.com" target="_blank" class="btn live">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Zishan9309/Anganwadi_Support" target="_blank" class="btn code">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Anganwadi.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Movies</h4>
+                    <p>Develop technical skills in web development.Gain practical
+                        experience through collaboration.</p>
+                    <div class="project-links">
+                        <a href="https://your-live-demo-link.com" target="_blank" class="btn live">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/yourusername/movies-app" target="_blank" class="btn code">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+            
+            
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2 class="heading">CONTACT <span>ME!</span></h2>
+
+        <form id="contact-form">
+  <div class="input-box">
+    <input type="text" id="contact-name" name="name" placeholder="Full Name" required>
+    <input type="email" id="contact-email" name="email" placeholder="Email Address" required>
+  </div>
+
+  <div class="input-box">
+    <input type="tel" id="contact-mobile" name="mobile" placeholder="Mobile Number">
+    <input type="text" id="contact-subject" name="subject" placeholder="Email Subject">
+  </div>
+
+  <textarea id="contact-message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+  <input type="submit" value="Send Message" class="btn">
+</form>
+        <span id="msg"></span>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    emailjs.init("O1zUDFK_nRuW-iZuO");
+    console.log("✅ EmailJS loaded:", typeof emailjs);
+  });
+</script>
+
+<!-- Libraries -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Main JS (LAST) -->
+<script src="script.js"></script>
+     
+</body>
+
+</html>
