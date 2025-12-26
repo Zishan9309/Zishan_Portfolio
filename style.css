@@ -722,3 +722,21 @@
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
+
+/* ================= PROFILE IMAGE RESPONSIVE FIX ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .home-img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .home-img {
+        width: 220px;
+        height: 220px;
+    }
+}
