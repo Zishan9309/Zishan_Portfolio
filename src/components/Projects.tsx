@@ -85,17 +85,36 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      // Fallback recovery if bundle path differs
                       const target = e.currentTarget;
-                      if (!target.dataset.triedFallback) {
-                        target.dataset.triedFallback = 'true';
-                        const filename = project.id === 'ola-ride-analytics' ? 'ola-overview.png'
-                          : project.id === 'weather-powerbi-dashboard' ? 'weather-dashboard.png'
-                          : project.id === 'e-commerce-sales-analytics' ? 'mobile-sales-dashboard.png'
-                          : project.id === 'crypto-volatility' ? 'crypto-dashboard.png'
-                          : project.id === 'anganwadi-support-app' ? 'anganwadi-cover.svg'
-                          : 'churn-cover.svg';
-                        target.src = `/images/${filename}`;
+                      const attempt = Number(target.dataset.attempt || '0');
+                      const rawGithubMap: Record<string, { publicFile: string; githubRaw: string }> = {
+                        'ola-ride-analytics': {
+                          publicFile: '/images/ola-overview.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Ola_Ride_Bookings_Analysis/main/Screenshots/Overview.png'
+                        },
+                        'weather-powerbi-dashboard': {
+                          publicFile: '/images/weather-dashboard.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Weather_Analysis_Dashboard/main/Screenshots/Weather%20Dashboard.png'
+                        },
+                        'e-commerce-sales-analytics': {
+                          publicFile: '/images/mobile-sales-dashboard.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Mobile_Sales_Analysis/main/Screenshots/Mobile%20Sale%20Dashboard.png'
+                        },
+                        'crypto-volatility': {
+                          publicFile: '/images/crypto-dashboard.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Crypto_Volatility_Zishan_Khan/main/Screenshots/Dashboard.png'
+                        }
+                      };
+
+                      const config = rawGithubMap[project.id];
+                      if (config) {
+                        if (attempt === 0) {
+                          target.dataset.attempt = '1';
+                          target.src = config.publicFile;
+                        } else if (attempt === 1) {
+                          target.dataset.attempt = '2';
+                          target.src = config.githubRaw;
+                        }
                       }
                     }}
                   />
@@ -296,15 +315,35 @@ export const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.currentTarget;
-                      if (!target.dataset.triedFallback) {
-                        target.dataset.triedFallback = 'true';
-                        const filename = activeProjectModal.id === 'ola-ride-analytics' ? 'ola-overview.png'
-                          : activeProjectModal.id === 'weather-powerbi-dashboard' ? 'weather-dashboard.png'
-                          : activeProjectModal.id === 'e-commerce-sales-analytics' ? 'mobile-sales-dashboard.png'
-                          : activeProjectModal.id === 'crypto-volatility' ? 'crypto-dashboard.png'
-                          : activeProjectModal.id === 'anganwadi-support-app' ? 'anganwadi-cover.svg'
-                          : 'churn-cover.svg';
-                        target.src = `/images/${filename}`;
+                      const attempt = Number(target.dataset.attempt || '0');
+                      const rawGithubMap: Record<string, { publicFile: string; githubRaw: string }> = {
+                        'ola-ride-analytics': {
+                          publicFile: '/images/ola-overview.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Ola_Ride_Bookings_Analysis/main/Screenshots/Overview.png'
+                        },
+                        'weather-powerbi-dashboard': {
+                          publicFile: '/images/weather-dashboard.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Weather_Analysis_Dashboard/main/Screenshots/Weather%20Dashboard.png'
+                        },
+                        'e-commerce-sales-analytics': {
+                          publicFile: '/images/mobile-sales-dashboard.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Mobile_Sales_Analysis/main/Screenshots/Mobile%20Sale%20Dashboard.png'
+                        },
+                        'crypto-volatility': {
+                          publicFile: '/images/crypto-dashboard.png',
+                          githubRaw: 'https://raw.githubusercontent.com/Zishan9309/Crypto_Volatility_Zishan_Khan/main/Screenshots/Dashboard.png'
+                        }
+                      };
+
+                      const config = rawGithubMap[activeProjectModal.id];
+                      if (config) {
+                        if (attempt === 0) {
+                          target.dataset.attempt = '1';
+                          target.src = config.publicFile;
+                        } else if (attempt === 1) {
+                          target.dataset.attempt = '2';
+                          target.src = config.githubRaw;
+                        }
                       }
                     }}
                   />
