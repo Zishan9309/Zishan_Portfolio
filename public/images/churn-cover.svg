@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg-grad-churn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="chart-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="area-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad-churn)"/>
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+  </g>
+
+  <!-- Top Header Bar -->
+  <rect x="40" y="24" width="720" height="60" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <rect x="56" y="38" width="32" height="32" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#60a5fa" stroke-width="1"/>
+  <!-- Brain / ML Icon -->
+  <circle cx="72" cy="54" r="7" fill="#60a5fa"/>
+  <text x="100" y="50" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="15" font-weight="700">Customer Churn Prediction & Retention Analytics</text>
+  <text x="100" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Random Forest • Logistic Regression • SMOTE Balancing • 7,000+ Customer Records</text>
+
+  <rect x="630" y="38" width="115" height="32" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+  <text x="687" y="58" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">84% ACCURACY</text>
+
+  <!-- Left: ML Performance Metrics & Confusion Matrix -->
+  <g transform="translate(40, 100)">
+    <!-- Main Performance Card -->
+    <rect width="360" height="320" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    
+    <text x="20" y="32" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Model Evaluation & ROC-AUC</text>
+    
+    <!-- KPI Row -->
+    <rect x="20" y="48" width="98" height="64" rx="8" fill="#1e293b"/>
+    <text x="69" y="72" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="18" font-weight="800" text-anchor="middle">84%</text>
+    <text x="69" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Test Accuracy</text>
+
+    <rect x="130" y="48" width="98" height="64" rx="8" fill="#1e293b"/>
+    <text x="179" y="72" fill="#34d399" font-family="system-ui, sans-serif" font-size="18" font-weight="800" text-anchor="middle">0.88</text>
+    <text x="179" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">ROC-AUC Score</text>
+
+    <rect x="240" y="48" width="98" height="64" rx="8" fill="#1e293b"/>
+    <text x="289" y="72" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="800" text-anchor="middle">7,043</text>
+    <text x="289" y="94" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Records Trained</text>
+
+    <!-- ROC Curve Area -->
+    <rect x="20" y="126" width="318" height="174" rx="8" fill="#020617" stroke="#1e293b"/>
+    <!-- Grid inside chart -->
+    <line x1="30" y1="280" x2="328" y2="280" stroke="#334155" stroke-width="1"/>
+    <line x1="30" y1="140" x2="30" y2="280" stroke="#334155" stroke-width="1"/>
+    <line x1="30" y1="280" x2="328" y2="140" stroke="#475569" stroke-dasharray="4,4" stroke-width="1"/>
+    
+    <!-- ROC Curve Path -->
+    <path d="M 30 280 Q 50 160 140 152 T 328 140 L 328 280 Z" fill="url(#area-grad)"/>
+    <path d="M 30 280 Q 50 160 140 152 T 328 140" fill="none" stroke="url(#chart-line-grad)" stroke-width="3"/>
+    
+    <circle cx="140" cy="152" r="5" fill="#10b981"/>
+    <text x="152" y="152" fill="#34d399" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700">Optimal Threshold (0.42)</text>
+    
+    <text x="179" y="294" fill="#64748b" font-family="system-ui, sans-serif" font-size="8" text-anchor="middle">False Positive Rate (1 - Specificity)</text>
+  </g>
+
+  <!-- Right: Feature Importance Breakdown -->
+  <g transform="translate(420, 100)">
+    <rect width="340" height="320" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="32" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Top Churn Predictors (Feature Importance)</text>
+
+    <!-- Bar 1: Contract Type -->
+    <g transform="translate(20, 52)">
+      <text x="0" y="14" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Month-to-Month Contract</text>
+      <text x="300" y="14" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="end">32.4%</text>
+      <rect y="22" width="300" height="10" rx="5" fill="#1e293b"/>
+      <rect y="22" width="220" height="10" rx="5" fill="#0284c7"/>
+    </g>
+
+    <!-- Bar 2: Total Charges / Tenure -->
+    <g transform="translate(20, 96)">
+      <text x="0" y="14" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Tenure (Months with Company)</text>
+      <text x="300" y="14" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="end">24.8%</text>
+      <rect y="22" width="300" height="10" rx="5" fill="#1e293b"/>
+      <rect y="22" width="170" height="10" rx="5" fill="#0ea5e9"/>
+    </g>
+
+    <!-- Bar 3: Tech Support Absence -->
+    <g transform="translate(20, 140)">
+      <text x="0" y="14" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">No Online Tech Support</text>
+      <text x="300" y="14" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="end">18.6%</text>
+      <rect y="22" width="300" height="10" rx="5" fill="#1e293b"/>
+      <rect y="22" width="128" height="10" rx="5" fill="#38bdf8"/>
+    </g>
+
+    <!-- Bar 4: Payment Method (Electronic Check) -->
+    <g transform="translate(20, 184)">
+      <text x="0" y="14" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Electronic Check Payment</text>
+      <text x="300" y="14" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700" text-anchor="end">14.1%</text>
+      <rect y="22" width="300" height="10" rx="5" fill="#1e293b"/>
+      <rect y="22" width="98" height="10" rx="5" fill="#60a5fa"/>
+    </g>
+
+    <!-- Bottom Actionable Insight Box -->
+    <rect x="20" y="238" width="300" height="66" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-opacity="0.3"/>
+    <text x="32" y="258" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700">★ Retention Strategy Impact</text>
+    <text x="32" y="274" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8.5">Converts high-churn risk cohort into annual</text>
+    <text x="32" y="288" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="8.5">subscribers, lowering churn by estimated 28%.</text>
+  </g>
+</svg>
